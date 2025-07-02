@@ -1,0 +1,99 @@
+.vent-wall {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.vent-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+.vent-form textarea {
+  border-radius: 10px;
+  border: 1px solid #b2dfdb;
+  padding: 0.7rem;
+  font-size: 1rem;
+  resize: vertical;
+  background: #f3e5f5;
+}
+.vent-image-input {
+  margin-top: 0.3rem;
+}
+.vent-image-preview {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 10px;
+  margin: 0.5rem 0 0.2rem 0;
+  box-shadow: 0 2px 8px rgba(100, 100, 200, 0.10);
+  display: block;
+}
+.vent-form button {
+  align-self: flex-end;
+  background: #6a1b9a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.vent-form button:hover {
+  background: #00796b;
+}
+.vent-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.vent-post {
+  background: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(100, 100, 200, 0.08);
+  padding: 1rem;
+  position: relative;
+}
+.vent-msg {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.vent-image {
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(100, 100, 200, 0.10);
+  display: block;
+}
+.vent-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  color: #6a1b9a;
+  margin-top: 0.2rem;
+}
+.vent-meta span {
+  font-size: 0.93rem;
+  color: #333;
+  background: #f3e5f5;
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+}
+.vent-reactions {
+  display: flex;
+  gap: 0.5rem;
+}
+.vent-emoji {
+  background: #fff;
+  border: 1px solid #b2dfdb;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.vent-emoji:hover {
+  background: #b2dfdb;
+} 

@@ -1,0 +1,103 @@
+.blog-feed {
+  text-align: center;
+}
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.blog-card {
+  background: #e0f7fa;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(100, 100, 200, 0.08);
+  width: 260px;
+  padding: 1rem;
+  text-align: left;
+  transition: transform 0.25s, box-shadow 0.25s, opacity 0.5s;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInCard 0.7s cubic-bezier(.5,1.5,.5,1) forwards;
+}
+.blog-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px #b2dfdb33;
+  z-index: 2;
+}
+.blog-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+}
+.blog-card h3 {
+  margin: 0.3rem 0 0.5rem 0;
+  color: #6a1b9a;
+}
+
+/* Modal styles */
+.blog-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(60, 60, 100, 0.25);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s;
+}
+.blog-modal {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(100, 100, 200, 0.18);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 400px;
+  width: 95%;
+  position: relative;
+  text-align: left;
+  animation: popIn 0.3s;
+}
+.blog-modal img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.blog-modal h2 {
+  color: #6a1b9a;
+  margin-top: 0;
+}
+.blog-modal-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6a1b9a;
+  cursor: pointer;
+  line-height: 1;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+@media (max-width: 700px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog-card {
+    width: 90%;
+  }
+  .blog-modal {
+    padding: 1rem 0.3rem;
+  }
+} 

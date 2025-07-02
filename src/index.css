@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  color: #333;
+  background: #f7f7fa;
+}
+
+.app-container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  padding-bottom: 0;
+  position: static;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeInMain 0.7s cubic-bezier(.5,1.5,.5,1);
+}
+
+@keyframes fadeInMain {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+
+.section-header {
+  animation: fadeInSection 0.7s cubic-bezier(.5,1.5,.5,1);
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: none; }
+}
+
+.section-title::after {
+  animation: glowUnderline 2s infinite alternate;
+}
+
+@keyframes glowUnderline {
+  from { box-shadow: 0 0 0px #b2dfdb; }
+  to { box-shadow: 0 0 12px #b2dfdb, 0 0 18px #e1bee7; }
+}
+
+/* Card hover lift */
+.blog-card, .vent-post, .journal, .resources, .mood-message {
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.blog-card:hover, .vent-post:hover, .journal:hover, .resources:hover, .mood-message:hover {
+  box-shadow: 0 8px 32px #b2dfdb33;
+  transform: translateY(-6px) scale(1.02);
+  z-index: 2;
+}
+
+/* Button ripple/bounce */
+button, .theme-switcher, .quote-refresh, .greeting-edit {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s;
+}
+
+button:active, .theme-switcher:active, .quote-refresh:active, .greeting-edit:active {
+  transform: scale(0.96);
+}
+
+button::after, .theme-switcher::after, .quote-refresh::after, .greeting-edit::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  width: 100%; height: 100%;
+  left: 0; top: 0;
+  opacity: 0;
+  background: radial-gradient(circle, #b2dfdb55 10%, transparent 70%);
+  transition: opacity 0.3s;
+}
+
+button:active::after, .theme-switcher:active::after, .quote-refresh:active::after, .greeting-edit:active::after {
+  opacity: 1;
+}
+
+/* Input focus glow */
+input, textarea, select {
+  transition: box-shadow 0.18s, border 0.18s;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #b2dfdb, 0 0 8px #e1bee7;
+  border-color: #b2dfdb;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+  main {
+    padding: 1rem 0.2rem;
+  }
+} 

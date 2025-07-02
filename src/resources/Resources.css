@@ -1,0 +1,37 @@
+.resources {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.helpline-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+.helpline-item {
+  background: #e0f7fa;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(100, 100, 200, 0.08);
+  text-align: left;
+}
+.helpline-item strong {
+  color: #6a1b9a;
+  font-size: 1.1rem;
+}
+.helpline-item a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.helpline-item a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .helpline-item {
+    font-size: 0.98rem;
+    padding: 0.7rem;
+  }
+} 
