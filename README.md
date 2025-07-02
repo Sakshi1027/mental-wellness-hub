@@ -151,5 +151,3 @@ npx cap open android
 
 ---
 
-## 📬 Need Help?
-Open an issue or ask your AI assistant for step-by-step help! 
