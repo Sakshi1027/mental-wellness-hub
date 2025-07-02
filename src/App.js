@@ -93,8 +93,6 @@ function Chatbot() {
 
   // Gemini API integration
   async function getGeminiReply(userMessage) {
-    const apiKey = 'AIzaSyAh1ONAWHICuRcC473_Lf0w9Ix22V3PL_0'; // Replace with your Gemini API key
-    const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' + apiKey;
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
