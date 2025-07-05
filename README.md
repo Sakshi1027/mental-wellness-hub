@@ -27,8 +27,8 @@ A modern, mobile-friendly web and mobile app for student mental health support, 
 
 1. **Clone the repo:**
    ```sh
-   git clone <your-repo-url>
-   cd mental-wellness-hub
+   git clone 
+   cd mental-wellness-hub <https://github.com/Sakshi1027/mental-wellness-hub>
    ```
 2. **Install dependencies:**
    ```sh
